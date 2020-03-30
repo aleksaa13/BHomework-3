@@ -81,6 +81,7 @@ font-size:1rem;
     cursor:pointer;
     border:green solid;
     color:green;
+    outline:hidden;
 }
 .lists{
     margin:auto;
@@ -103,22 +104,47 @@ font-size:1rem;
     color:rgb(65, 168, 117);
     font-size:1.5rem;
 }
-li{
-    width:80%;
-    padding:5%;
-    position:relative;
-}
 ul{
+    height:100%;
     list-style-type: none;
 }
-.li-name{
-    position:absolute;
-    left:0;
-    padding:5%;
+.radios{
+width:5%;
+position:relative;
 }
-.li-value{
+.radio{
+    margin-left:0.5rem;
     position:absolute;
     right:0;
-    padding:5%;
 }
 
+
+/*ADDED ELEMENTS STYLES  */
+
+
+li{
+    height:2rem;
+    margin:1rem;
+}
+.li-par-left{
+    float:left;
+    text-decoration:solid;
+  font-size:1.2rem;
+
+}
+.li-par-right{
+    float:right;
+    display:flex;
+    flex-direction:row;
+    align-items:space-between;
+    font-size:1.2rem;
+}
+.deleteBtn{
+    color:white;
+    background-color:red;
+    border-radius:50%;
+    cursor:pointer;
+    outline:hidden;
+    border:none;
+    float:right;
+}
