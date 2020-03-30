@@ -1,0 +1,124 @@
+body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.info-container{
+    width:100%;
+    height:40vh;
+    overflow:hidden;
+}
+img{
+    
+    width:100%;
+    z-index:1;
+}
+.data{
+    position:absolute;
+    top:7%;
+    left:40%;
+    display:flex;
+    flex-direction:column;
+    width:20%;
+    
+}
+.amount{
+    font-size:2rem;
+}
+.data>p{
+    color:white;
+    text-align:center;
+    z-index:2;
+    text-align:center;
+    position:relative;
+    width:100%;
+}
+.span1{
+position:absolute;
+left:0;
+color:black;
+padding:0.5rem;
+font-size:1rem;
+}
+.span2{
+    position:absolute;
+    right:0;
+    color:white;
+    padding:0.5rem;
+    font-size:1rem;
+}
+.income{
+    height:2rem;
+    background-color:rgb(65, 168, 117);
+}
+.expenses{
+    height:2rem;
+    background-color:rgb(139, 56, 56);
+}
+.inputs{
+    display:flex;
+    flex-direction:row;
+    width:55%;
+    margin:auto;
+    margin-top:3%;
+}
+.number{
+    width:7%;
+    margin:1%;
+}
+.des{
+    width:50%;
+    margin:1%;
+}
+.val{
+    width:20%;
+    margin:1%;
+}
+.btn{
+    width:5%;
+    margin:1%;
+    border-radius:50%;
+    cursor:pointer;
+    border:green solid;
+    color:green;
+}
+.lists{
+    margin:auto;
+    display:flex;
+    flex-direction:row;
+    width:80%;
+    margin-top:5%;
+}
+.list-holder>p{
+    text-align:center;
+}
+.lists>.list-holder{
+    width:50%;
+}
+.expenses-list-header{
+    color:rgb(139, 56, 56);
+    font-size:1.5rem;
+}
+.income-list-header{
+    color:rgb(65, 168, 117);
+    font-size:1.5rem;
+}
+li{
+    width:80%;
+    padding:5%;
+    position:relative;
+}
+ul{
+    list-style-type: none;
+}
+.li-name{
+    position:absolute;
+    left:0;
+    padding:5%;
+}
+.li-value{
+    position:absolute;
+    right:0;
+    padding:5%;
+}
+
