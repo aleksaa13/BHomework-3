@@ -30,21 +30,37 @@ function addItem() {
         par2.classList.add("li-par-right");
         let floatValue=parseFloat(value).toFixed(2);
         par2.appendChild(document.createTextNode(sign + floatValue));
+         //AZURIRAMO BUDZET I DODAJEMO PROCENTE
+        if(sign==="-"){
+           let par3=document.createElement("p");
+           par3.classList.add("par-percent");
+           let percentage=floatValue/income*100;
+           par3.appendChild(document.createTextNode(Math.round(percentage)+"%"));
+           li.appendChild(par3);
+           expenses=expenses-parseFloat(floatValue);
+            }
+        else{
+            income=income+parseFloat(floatValue);
+        }
         li.appendChild(par1);
         li.appendChild(button);
         li.appendChild(par2);
         list.appendChild(li);
-         //AZURIRAMO BUDZET
-        if(sign==="-"){
-            expenses=expenses-parseFloat(floatValue);
-            //DODATI PROCENTE!!!
-        }
-        else{
-            income=income+parseFloat(floatValue);
-        }
         document.getElementById("income").textContent="+"+income.toFixed(2);
         document.getElementById("expenses").textContent=expenses.toFixed(2);
         document.getElementsByClassName("amount")[0].textContent=(income+expenses).toFixed(2);
+
+        //AZURIRAMO PROCENTE
+        let percentages=document.getElementsByClassName("par-percent");
+        for(let i=0;i<percentages.length;i++){
+            let newPer=percentages[i].parentElement.children[3].textContent;
+            newPer=Math.ceil(parseFloat(newPer)/income*100*(-1));
+            percentages[i].textContent=newPer+"%";
+        }
+        let totalPercentage=expenses/income*100*(-1);
+        console.log("aleksa");
+document.getElementsByClassName("span3")[0].textContent=Math.ceil(totalPercentage)+"%";
+document.getElementsByClassName("income")[0].children[1].style.marginLeft=document.getElementsByClassName("span3")[0].offsetWidth.toString();
     }
     }
 }
@@ -57,17 +73,29 @@ function deleteItem(event) {
         //AZURIRAMO BUDZET
         let str=li.getElementsByClassName("li-par-right")[0].textContent.substr(1);
         console.log(income);
-    console.log(expenses);
+        console.log(expenses);
     if(list.classList.contains("inc")){
         income=income-parseFloat(str).toFixed(2);
-        document.getElementById("income").textContent="+"+income;
+        document.getElementById("income").textContent="+"+income.toFixed(2);
     }
     if(list.classList.contains("exp")){
-        expenses=expenses-(parseFloat(str).toFixed(2)*(-1));
-        document.getElementById("expenses").textContent=expenses;
+        expenses=expenses-parseFloat(str).toFixed(2)*(-1);
+        document.getElementById("expenses").textContent=expenses.toFixed(2);
     }
     document.getElementsByClassName("amount")[0].textContent=(income+expenses).toFixed(2);
     list.removeChild(li);
+
+    //AZURIRAMO PROCENTE
+    let percentages=document.getElementsByClassName("par-percent");
+        for(let i=0;i<percentages.length;i++){
+            let newPer=percentages[i].parentElement.children[3].textContent;
+            newPer=Math.ceil(parseFloat(newPer)/income*100*(-1));
+            percentages[i].textContent=newPer+"%";
+        }
+let totalPercentage=expenses/income*100*(-1);
+document.getElementsByClassName("span3")[0].textContent=Math.ceil(totalPercentage)+"%";
+document.getElementsByClassName("income")[0].children[1].style.paddingLeft=document.getElementsByClassName("span3")[0].offsetWidth.toString();
+    
 }
 }
 document.getElementById("btn").addEventListener("click",allowOnlyNumbers);
@@ -82,6 +110,7 @@ function allowOnlyNumbers(){
         return false;
     }
 }
+
 
 
 

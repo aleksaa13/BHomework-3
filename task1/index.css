@@ -30,22 +30,24 @@ img{
     text-align:center;
     z-index:2;
     text-align:center;
-    position:relative;
     width:100%;
 }
 .span1{
-position:absolute;
-left:0;
+float:left;
 color:black;
 padding:0.5rem;
 font-size:1rem;
 }
 .span2{
-    position:absolute;
-    right:0;
+    float:right;
     color:white;
     padding:0.5rem;
     font-size:1rem;
+}
+.span3{
+    float:right;
+    font-size:0.7rem;
+    color:white;
 }
 .income{
     height:2rem;
@@ -147,4 +149,8 @@ li{
     outline:hidden;
     border:none;
     float:right;
+}
+.par-percent{
+    float:right;
+    font-size:1rem;
 }
