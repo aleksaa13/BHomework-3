@@ -37,3 +37,14 @@ h5{
     width:200%;
     text-align:center;
 }
+#load-more{
+width:20%;
+margin:auto;
+text-align:center;
+}
+#load-more-button{
+    border:none;
+    background-color:#E1F3F1;
+    outline:hidden;
+    border-radius:30%;
+}
