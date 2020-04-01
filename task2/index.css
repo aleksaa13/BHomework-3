@@ -1,0 +1,39 @@
+body{
+    background-color:grey;
+}
+#searches{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    width:70%;
+    margin:auto;
+}
+#searchField{
+    width:40%;
+}
+#searches>button{
+    margin-right:5%;
+}
+table{
+    background-color:#E1F3F1;
+    width:70%;
+    margin:auto;
+    margin-top:10%;
+}
+.img-container{
+    width:25%;
+}
+img{
+    height:10vw;
+    width:6vw;
+}
+th{
+    text-align:center;
+}
+td{
+    text-align:center;
+}
+h5{
+    width:200%;
+    text-align:center;
+}
