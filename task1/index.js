@@ -30,6 +30,7 @@ function unloadStorage(){
             par1.textContent = description;
             par1.classList.add("li-par-left");
             par2.classList.add("li-par-right");
+            par2.classList.add("green");
             let floatValue = parseFloat(value).toFixed(2);
             par2.appendChild(document.createTextNode(value));
             li.appendChild(par1);
@@ -52,6 +53,7 @@ function unloadStorage(){
             par1.textContent = description;
             par1.classList.add("li-par-left");
             par2.classList.add("li-par-right");
+            par2.classList.add("red");
             let floatValue = parseFloat(value).toFixed(2);
             par2.appendChild(document.createTextNode(value));
             let par3 = document.createElement("p");
@@ -131,6 +133,7 @@ function addItem() {
             par2.appendChild(document.createTextNode(sign + floatValue));
             //AZURIRAMO BUDZET I DODAJEMO PROCENTE
             if (sign === "-") {
+                par2.classList.add("red");
                 let par3 = document.createElement("p");
                 par3.classList.add("par-percent");
                 let percentage = floatValue / income * 100;
@@ -139,6 +142,7 @@ function addItem() {
                 expenses = expenses - parseFloat(floatValue);
             }
             else {
+                par2.classList.add("green");
                 income = income + parseFloat(floatValue);
             }
             li.appendChild(par1);
@@ -197,7 +201,7 @@ function deleteItem(event) {
             newPer = Math.ceil(parseFloat(newPer) / income * 100 * (-1));
             percentages[i].textContent = newPer + "%";
         }
-        let totalPercentage = expenses / income * 100 * (-1);
+        let totalPercentage = (expenses / income * 100 * (-1).toFixed(0));
         document.getElementsByClassName("span3")[0].textContent = Math.ceil(totalPercentage) + "%";
     }
 }
