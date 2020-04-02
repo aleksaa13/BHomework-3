@@ -1,0 +1,13 @@
+.check{
+    float:right;
+    margin: 1% 5% 1% 0;
+}
+#save-profile{
+    border-radius:15%;
+    background-color:green;
+    color:white;
+    outline:hidden;
+    border:none;
+    cursor:pointer;
+
+}
