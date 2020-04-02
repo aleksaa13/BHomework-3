@@ -1,34 +1,41 @@
 body{
-    background-color:grey;
+    background-color:#A3C6C4;
+    font-weight:700;
 }
 #searches{
     display:flex;
     justify-content:space-around;
     align-items:center;
     width:70%;
-    margin:auto;
+    margin:5% auto 0 auto;
 }
 #searchField{
     width:40%;
 }
 #searches>button{
     margin-right:5%;
+    background-color: #6C7A89;
+    color:#E0E7E9;
+    outline:hidden;
+    border:hidden;
 }
 table{
-    background-color:#E1F3F1;
+    background-color:#E0E7E9;
     width:70%;
     margin:auto;
     margin-top:10%;
+    color:#354649;
 }
 .img-container{
     width:25%;
 }
 img{
-    height:10vw;
-    width:6vw;
+    height:9vw;
+    width:7vw;
 }
 th{
     text-align:center;
+    color:grey;
 }
 td{
     text-align:center;
@@ -44,7 +51,7 @@ text-align:center;
 }
 #load-more-button{
     border:none;
-    background-color:#E1F3F1;
+    background-color:#E0E7E9;
     outline:hidden;
     border-radius:30%;
 }
