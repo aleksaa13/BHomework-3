@@ -2,6 +2,9 @@ body{
     background-color:#A3C6C4;
     font-weight:700;
 }
+.search-by{
+    color:#E0E7E9;
+}
 #searches{
     display:flex;
     justify-content:space-around;
